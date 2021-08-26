@@ -1,8 +1,8 @@
 .myModal {
     position: fixed;
-    top: 25vh;
-    left: 25vw;
-    width: 50vw;
+    top: 5vh;
+    left: 10vw;
+    width: 80vw;
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
@@ -35,14 +35,15 @@
 }
 .modal-row {
     display: flex;
-    margin: 0 -1.5rem;
+    margin: 1.2rem -.1rem;
     .modal-col-3 {
         width: 25%;
         padding: 0 1.5rem;
     }
     .modal-col-9 {
         width: 75%;
-        padding: 0 1.5rem;
+        padding: 3rem 3rem;
+        text-align: left !important;
     }
 }
 .leftSide {
@@ -53,14 +54,25 @@
         
     }
 }
+.right_side{
+    padding-left: 2rem;
+    
+}
+
 .shape_img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all .5s;
     transform: scale(1.3);
+    
 }
-
+.para_column{
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-2;
+    
+}
 @keyframes slideDown {
     0% {
         transform: translateY(-20px);

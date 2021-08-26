@@ -1,15 +1,23 @@
 {
   "name": "newnutrislayout",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-  "compile-sass":"node-sass assets/scss/style.scss assets/css/style.css"
+    "compile-sass": "node-sass assets/scss/style.scss assets/css/style.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.6.0",
     "node-sass": "^6.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mr-AbhijeetUdawant/natours-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mr-AbhijeetUdawant/natours-project/issues"
+  },
+  "homepage": "https://github.com/Mr-AbhijeetUdawant/natours-project#readme",
+  "description": ""
 }
