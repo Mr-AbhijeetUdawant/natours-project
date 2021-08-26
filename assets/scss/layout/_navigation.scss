@@ -1,0 +1,122 @@
+.nav {
+    ul.navbar-list {
+        list-style: none;
+        position: fixed;
+        height: 0;
+        width: 0;
+        left: -100%;
+        top: 30%;
+        z-index: 1000;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        transition: all .8s ;
+        li{
+            a{
+                &:link,
+                &:visited{
+                    text-decoration: none;
+                    font-size: 3rem;
+                    color: $color-white;
+                    padding: 1rem 2rem;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    transition: all .4s;
+                    font-weight: 300;
+                    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+                    background-size: 220%;
+                }
+                &:hover, &:focus{
+                    background-position: 100%;
+                    color: $color-primary;
+                }
+                span{
+                    margin-right: 1.5rem;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .navbar-button {
+        position: fixed;
+        top: 4rem;
+        right: 4rem;
+        width: 7rem;
+        height: 7rem;
+        z-index: 9999;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba($color: $color-dark, $alpha: 0.15);
+        background-color: $color-white;
+        cursor: pointer;
+        text-align: center;
+        .navbar-icon {
+            margin-top: 3.5rem;
+            position: relative;
+            &,
+            &::after,
+            &::before {
+                width: 3rem;
+                height: 2px;
+                background-color: $color-grey-3;
+                display: inline-block;
+            }
+            &::before,
+            &::after {
+                content: "";
+                left: 0;
+                position: absolute;
+                transition: all 0.2s;
+            }
+            &::after {
+                top: 0.8rem;
+            }
+            &::before {
+                top: -0.8rem;
+            }
+        }
+        &:hover .navbar-icon::before {
+            top: -1rem;
+        }
+        &:hover .navbar-icon::after {
+            top: 1rem;
+        }
+    }
+    .navigation-background {
+        position: fixed;
+        width: 6rem;
+        height: 6rem;
+        background-image: radial-gradient($color-primary, $color-darkgren);
+        z-index: 999;
+        border-radius: 50%;
+        top: 4.5rem;
+        right: 4.5rem;
+        transition: all 0.8s cubic-bezier(0.65, 0.55, 0.27, 1.59);
+    }
+    &.active {
+        .navbar-button {
+            .navbar-icon {
+                background: transparent !important;
+                &::after {
+                    transform: rotate(130deg);
+                    top: 0;
+                }
+                &::before {
+                    transform: rotate(-130deg);
+                    top: 0;
+                }
+            }
+        }
+        .navigation-background {
+            transform: scale(80);
+        }
+        .navbar-list {
+            list-style: none;
+            position: fixed;
+            width: 100%;
+            left: 50%;
+            top: 30%;
+            z-index: 1000;
+            transform: translate(-50%, -50%);
+            // animation: moveInRight .8s;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@mixin clearFix {
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+@mixin textClipGradient {
+    background-image: linear-gradient(to right, $color-primary, $color-darkgren);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@mixin backgroundImg($imgpath) {
+    
+    background-image: linear-gradient(to right bottom,$color-gradient-one, $color-gradient-two),$imgpath;
+    background-size: cover;
+    background-position: center center;
+}

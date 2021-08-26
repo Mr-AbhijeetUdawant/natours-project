@@ -1,0 +1,52 @@
+.about_us{
+    background-color:$color-grey;
+    margin: -10rem 0;
+    padding:10rem 0;
+}
+.feature_section{
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom, rgba($color-gradient-one, .8), rgba($color-gradient-two, .8)), url(../images/img/nat-4.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform: skewY(-5deg);
+    >*{
+    transform: skewY(5deg);
+
+    }
+    &_icon{
+        font-size: 6rem;
+        display: inline-block;
+        // background-image: linear-gradient(to right, $color-primary, $color-darkgren);
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // color: transparent;
+        @include textClipGradient;
+        margin-bottom: 1rem;
+    }
+}
+.section_tours{
+    background-color: $color-grey;
+    padding: 15rem 0;
+    margin-top: -20vh;
+}
+.section_stories{
+    padding: 5rem 0;
+    // background-color: pink;
+    position: relative;
+}
+.section_book{
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary, $color-darkgren  );
+}
+.book{
+    background-image: linear-gradient(107deg,rgba($color-white, .9)0%,rgba($color-white, .9) 50%, transparent 50%),
+    url(../images/img/nat-10.jpg);
+    border-radius: 3px;
+    height: 50rem;
+    background-size: cover;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-dark, $alpha: .2);
+    &_form{
+        width: 50%;
+        padding: 6rem;
+    }
+}

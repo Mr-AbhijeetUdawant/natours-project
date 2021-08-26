@@ -1,0 +1,79 @@
+.form{
+    &_group{
+        margin-bottom: 2rem;
+    } 
+    &_control{
+        width: 100%;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white,.5);
+        font-family: inherit; 
+        color: inherit;
+        border: none;
+        border-bottom: 3px solid transparent;
+        &:focus{
+            outline: none;
+            border-bottom: 3px solid $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color: $color-dark, $alpha: .1);
+        }
+        &:focus:invalid{
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+        &::placeholder{
+            color: $color-grey-2;
+        }
+    }
+    &_label{
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: .7rem 0 0 2rem;
+        transition: all .2s;
+    }
+    &_control:placeholder-shown + &_label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+    &_radio_group{
+        width: 49%;
+        display: inline-block;
+        position: relative;
+    }
+    &_radio_button{
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.5rem;
+        &::after{
+            content: "";
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            background-color: $color-primary;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transform: opacity .2s;
+        }
+    }
+    &_radio_input{
+        display: none;
+    }
+    &_radio_label{
+        font-size: 1.6rem;
+        cursor: pointer;
+        padding-left: 4rem;
+        
+    }
+    &_radio_input:checked + &_radio_label &_radio_button::after{
+        opacity: 1;
+    }
+}
